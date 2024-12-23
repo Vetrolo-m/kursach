@@ -1,0 +1,28 @@
+﻿<Window x:Class="NumberSystemCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Калькулятор систем счисления" Height="200" Width="400">
+    <Grid>
+        <Label Content="Число" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+        <TextBox Name="inputNumber" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,30,0,0"/>
+
+        <Label Content="Система счисления (вход)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0"/>
+        <ComboBox Name="inputBase" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,90,0,0">
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="10"/>
+            <ComboBoxItem Content="16"/>
+        </ComboBox>
+
+        <Label Content="Система счисления (выход)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,120,0,0"/>
+        <ComboBox Name="outputBase" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,150,0,0">
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="10"/>
+            <ComboBoxItem Content="16"/>
+        </ComboBox>
+
+        <Button Content="Конвертировать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="220,30,0,0" Click="ConvertButton_Click"/>
+
+        <Label Content="Результат" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,70,0,0"/>
+        <TextBox Name="outputNumber" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="220,90,0,0" IsReadOnly="True"/>
+    </Grid>
+</Window>
